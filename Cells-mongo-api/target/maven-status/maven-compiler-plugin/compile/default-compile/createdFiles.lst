@@ -1,0 +1,4 @@
+com\cells\api\AppController.class
+com\cells\api\Cells2G.class
+com\cells\api\CellsApplication.class
+com\cells\api\CellsRepository.class

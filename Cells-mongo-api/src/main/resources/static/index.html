@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Passwords</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />    
+	
+	
+</head>
+<body>
+		<h1>Welcome to Jordan </h1>
+	
+
+            Node name  :- <input type="text" name="snode_" id="snode_" value=""><br>
+            Username   :- <input type="text" name="suser_" id="suser_" value=""><br>
+            Node password  :- <input type="password" name="splaintext_" id="splaintext_" value=""><br>
+            Master password  :- <input type="password" name="smasterPass_" id="smasterPass_" value=""><br>
+            <button type="submit" onclick="Add_pass()">Add</button><br>
+            
+        <br>
+        <br>
+        <br>
+            Node name  :- <input type="text" id="snode" name="snode" value=""><br>
+            Master password  :- <input type="password" id="smasterPass" name="smasterPass" value=""><br>
+            <button type="submit" onclick="Show_pass()">find</button><br>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+function Show_pass (){
+	
+
+	var snode = $('#snode').val();
+	var smasterPass = $('#smasterPass').val();
+
+
+	$.ajax({
+        type: 'GET',
+        url: "http://localhost:8080/pass/find/?snode="+snode+"&masterpass="+smasterPass,
+        success: 
+        function check(response){alert(response);},
+     
+});
+}
+
+function Add_pass (){
+	
+
+	var snode = $('#snode_').val();
+	var suser = $('#suser_').val();
+	var splaintext = $('#splaintext_').val();
+	var smasterPass = $('#smasterPass_').val();
+
+
+	$.ajax({
+        type: 'GET',
+        url: "http://localhost:8080/pass/add/?snode="+snode+"&suser="+suser+"&splaintext="+splaintext+"&masterpass="+smasterPass,
+        success:       	
+        	function check(response){alert(response);
+        },
+        
+});
+}
+	
+
+//        url: "https://localhost:8080/pass/find/?snode="+snode+"&suser="+suser+"&splaintext="+splaintext+"&masterpass="+smasterPass,
+
+
+</script>
+</html>   
