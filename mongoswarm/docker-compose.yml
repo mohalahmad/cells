@@ -1,0 +1,34 @@
+
+version: '3'
+
+
+services:
+  
+  db:
+    image: mongo
+    volumes:
+      - C:\Users\mohd.ahmad\Documents\Codes\udemy-docker-mastery\test_mongocopycsv\data:/home  
+      - mongodb:/data/db
+    ports: 
+      - "9090:27017"
+  mongo-express:
+    image: mongo-express
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=db
+      - ME_CONFIG_MONGODB_PORT=27017
+ 
+    depends_on:
+      - db
+    ports:
+      - "8081:8081"
+  api:
+    image: api-cell
+    networks: 
+      - default
+    ports: 
+      - "8080:8080"
+    depends_on: 
+      - db
+
+volumes: 
+  mongodb:
