@@ -3,7 +3,8 @@ to try this first run
 $mvn clean install 
 which goning  to make jar file in the target folder 
 then you build docker image in the java directory 
-$docker image build -f Dockerfile -t api-cell
+$docker image build -f Dockerfile -t api-cell .
+**dont forget the dot (.) at the end
 
 go the swarm directory and run this
 $ docker stack deploy -c docker-compose.yml db
