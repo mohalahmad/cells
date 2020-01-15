@@ -7,7 +7,7 @@ services:
   db:
     image: mongo
     volumes:
-      - C:\Users\mohd.ahmad\Documents\Codes\udemy-docker-mastery\test_mongocopycsv\data:/home  
+      - C:\Users\PC\Documents\Codes\data:/home  
       - mongodb:/data/db
     ports: 
       - "9090:27017"
@@ -22,7 +22,7 @@ services:
     ports:
       - "8081:8081"
   api:
-    image: api-cell
+    image: mohalahmad/api-cell
     networks: 
       - default
     ports: 
