@@ -1,6 +1,6 @@
 Here you can find full example for docker mongo spring boot
 -to try this first run in java folder directory
-**$mvn clean install  
+****$mvn clean install ***
 
 -which goning  to make jar file in the target folder 
 then you build docker image in the java directory 
