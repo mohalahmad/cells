@@ -1,9 +1,11 @@
-Here you can find full example for docker mongo spring boot
+Here you can find full example for docker mongo spring boot.
+
 -to try this first run in java folder directory
 **$mvn clean install**
 
--which goning  to make jar file in the target folder 
-then you build docker image in the java directory 
+-which goning  to make jar file in the target folder
+
+-then you build docker image in the java directory 
 **$docker image build -f Dockerfile -t api-cell .**
 **dont forget the dot (.) at the end**
 
