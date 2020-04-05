@@ -22,6 +22,10 @@ Here you can find full example for docker mongo spring boot.
 
 -command lines to remember:
 
+-Enter docker container bash  :  
+**docker exec -it container_id bash** 
+
+
 -for windows to add CSV:
 **mongoimport --db Cells --collection Cells2G --type csv --headerline --file cells.csv**
 
