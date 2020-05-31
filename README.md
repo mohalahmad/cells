@@ -33,6 +33,11 @@ Here you can find full example for docker mongo spring boot.
 ***make sure the collection name starts with a letter**
 **$mongoimport -d Cells -c cells2G --type csv --headerline  /home/cells.csv**
 
+-to add data form CSV file from any windows without accessing the containers:
+**mongoimport --host 127.0.0.1:9090 --db Cells --collection cells4G --type csv --headerline --file cells4G.csv
+
+
+
 -VERY IMPORTANAT:
 **$docker service create --network db_default  try-this-please**
 
