@@ -16,6 +16,9 @@ Here you can find full example for docker mongo spring boot.
 **$docker service ls**
 **$docker ps**
 
+- you can update service image with this command:
+**docker service update --image  mohalahmad/api-cell:1.1 db_api
+
 -also you can lose this mongo-express if you like and use mongoDB Compass connect to:
 **server: localhost**
 **port: 9090**
